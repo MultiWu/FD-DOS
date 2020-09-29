@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g35l27DcAm4iU6xFUADxc62c7/HrIDlp8GFlAAzjTwFY4eW0DqK/O3XWvc/jZIPszLIpDVCJjj/mfriqZLxlbA==",
+  "dgSpecHash": "4xLH8VtmRVt6A1mAOR/8gCnCKXp5VspPYvYV1fLgOJh8NwokBtT7/UpyA+788TwGNkLER+S5bUwy8zi7ItBaSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Oliwier\\source\\repos\\FD-DOS\\FD-DOS.csproj",
+  "projectFilePath": "C:\\Users\\Oliwier\\Documents\\GitHub\\FD-DOS\\FD-DOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oliwier\\.nuget\\packages\\cosmos.build\\0.1.0-localbuild20200708061311\\cosmos.build.0.1.0-localbuild20200708061311.nupkg.sha512",
     "C:\\Users\\Oliwier\\.nuget\\packages\\cosmos.common\\0.1.0-localbuild20200708061311\\cosmos.common.0.1.0-localbuild20200708061311.nupkg.sha512",

@@ -3,31 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
 using System.Threading;
+using System.IO;
+using Cmds = FD_DOS.cmds;
 
 namespace FD_DOS
 {
     public class Kernel : Sys.Kernel
     {
-        string lang;
-        public static void WaitSeconds(int secNum)
-        {
-            int StartSec = RTC.Second;
-            int EndSec;
-            if (StartSec + secNum > 59)
-            {
-                EndSec = 0;
-            }
-            else
-            {
-                EndSec = StartSec + secNum;
-            }
-            while (RTC.Second != EndSec)
-            {
-                // Loop round
-            }
-        }
+        public static string version = "Alpha 0.0.1";
+        public string lang;
+        public bool runned;
         protected override void BeforeRun()
         {
+            Cosmos.Core.ACPI.Enable();
+            runned = false;
             Console.Clear();
             Console.WriteLine("Polski (P) / English (E)?");
             Console.Write("Jezyk / Language: ");
@@ -45,7 +34,7 @@ namespace FD_DOS
                 Console.Clear();
                 Console.WriteLine("Incorrect selection / Niepoprawny wybor");
                 Console.WriteLine("Try again / Sprobuj ponownie");
-                System.Threading.Thread.Sleep(250);
+                Cosmos.HAL.Global.PIT.Wait(750);
                 Console.Clear();
                 BeforeRun();
             }
@@ -67,26 +56,58 @@ namespace FD_DOS
                 BeforeRun();
             }
         }
-        protected void RunPL()
+        public void CmdToRun()
         {
             Console.Clear();
-            Console.WriteLine("FD-DOS uruchomiony pomyslnie.");
-            Console.Write("Input: ");
+            if (lang == "PL")
+            {
+                RunPL();
+            }
+            if (lang == "EN")
+            {
+                RunEN();
+            }
+            else
+            {
+                BeforeRun();
+            }
+        }
+        public void RunPL()
+        {
+            switch (runned)
+            {
+                case true:
+                    break;
+
+                case false:
+                    Console.Clear();
+                    Console.WriteLine("FD-DOS uruchomiony pomyslnie.");
+                    runned = true;
+                    break;
+            }
+            Console.Write("Komenda: ");
             var input = Console.ReadLine();
-            Console.Write("Text typed: ");
-            Console.WriteLine(input);
-            System.Threading.Thread.Sleep(250);
+            cmds.CheckForCMD(input, lang);
+            // Cosmos.HAL.Global.PIT.Wait(250);
             RunPL();
         }
-        protected void RunEN()
+        public void RunEN()
         {
-            Console.Clear();
-            Console.WriteLine("FD-DOS booted successfully.");
-            Console.Write("Input: ");
+            switch (runned)
+            {
+                case true:
+                    break;
+
+                case false:
+                    Console.Clear();
+                    Console.WriteLine("FD-DOS booted successfully.");
+                    runned = true;
+                    break;
+            }
+            Console.Write("Command: ");
             var input = Console.ReadLine();
-            Console.Write("Text typed: ");
-            Console.WriteLine(input);
-            System.Threading.Thread.Sleep(250);
+            cmds.CheckForCMD(input, lang);
+            // Cosmos.HAL.Global.PIT.Wait(250);
             RunEN();
         }
     }
