@@ -1,0 +1,9 @@
+C:\Users\Oliwier\source\repos\FD-DOS\bin\Debug\netcoreapp2.0\cosmos\FD-DOS.deps.json
+C:\Users\Oliwier\source\repos\FD-DOS\bin\Debug\netcoreapp2.0\cosmos\FD-DOS.dll
+C:\Users\Oliwier\source\repos\FD-DOS\bin\Debug\netcoreapp2.0\cosmos\FD-DOS.pdb
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.csprojAssemblyReference.cache
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.AssemblyInfoInputs.cache
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.AssemblyInfo.cs
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.csproj.CoreCompileInputs.cache
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.dll
+C:\Users\Oliwier\source\repos\FD-DOS\obj\Debug\netcoreapp2.0\cosmos\FD-DOS.pdb
