@@ -9,7 +9,7 @@ using Kernel = FD_DOS.Kernel;
 
 namespace FD_DOS
 {
-    public class cmds
+    public class Cmds
 {
         public static void CheckForCMD(string input, string lang)
         {
